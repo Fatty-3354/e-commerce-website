@@ -8,6 +8,7 @@ import { PiShoppingBag } from "react-icons/pi";
 import { PiHeartLight } from "react-icons/pi";
 import logo from '../public/logo.png'
 import Image from "next/image";
+// import { Inter } from "next/font/google";
 
 
 
@@ -18,7 +19,7 @@ interface navProp{
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
-
+    // const inter = Inter({ subsets: ['latin'], weight: ['400'] })
     const handleToggleMenu = ()=>{
         console.log(toggleMenu)
         setToggleMenu(prev=>!prev)
@@ -39,7 +40,7 @@ const Navbar = () => {
                 <BiMenuAltLeft className="text-3xl" />
             </button>
             
-            <div className={` ${toggleMenu ? "top-20 left-0 flex w-full h-125 flex-col "  : "hidden lg:flex "} flex lg:w-auto lg:h-auto  lg:flex-row pl-5 lg:pl-0 lg:pt-0 pt-5 hover:bg-black/45 lg:hover:bg-none hover:text-white gap-8 lg:hover:text-black lg:static absolute  bg-black/30 lg:bg-transparent backdrop-blur-2xl lg:backdrop-blur-none`}>
+            <div className={` ${toggleMenu ? "top-20 left-0 flex w-full h-125 flex-col "  : "hidden lg:flex "} flex lg:w-auto lg:h-auto  lg:flex-row pl-5 lg:pl-0 lg:pt-0 pt-5 hover:bg-black/45 lg:hover:bg-none hover:text-white gap-8 lg:hover:text-black lg:static absolute z-50 bg-black/30 lg:bg-transparent backdrop-blur-2xl lg:backdrop-blur-none`}>
                 <NavLinks href="/">Home</NavLinks>
                 <NavLinks href="">Collections</NavLinks>
                 <NavLinks href="">New</NavLinks>
